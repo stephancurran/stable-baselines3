@@ -1,11 +1,11 @@
 import numpy as np
 import pytest
 
-from stable_baselines3_ import A2C, DDPG, DQN, PPO, SAC, TD3
-from stable_baselines3_.common.envs import IdentityEnv, IdentityEnvBox, IdentityEnvMultiBinary, IdentityEnvMultiDiscrete
-from stable_baselines3_.common.evaluation import evaluate_policy
-from stable_baselines3_.common.noise import NormalActionNoise
-from stable_baselines3_.common.vec_env import DummyVecEnv
+from stable_baselines3 import A2C, DDPG, DQN, PPO, SAC, TD3
+from stable_baselines3.common.envs import IdentityEnv, IdentityEnvBox, IdentityEnvMultiBinary, IdentityEnvMultiDiscrete
+from stable_baselines3.common.evaluation import evaluate_policy
+from stable_baselines3.common.noise import NormalActionNoise
+from stable_baselines3.common.vec_env import DummyVecEnv
 
 DIM = 4
 

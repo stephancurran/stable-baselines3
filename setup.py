@@ -2,7 +2,7 @@ import os
 
 from setuptools import find_packages, setup
 
-with open(os.path.join("stable_baselines3_", "version.txt")) as file_handler:
+with open(os.path.join("stable_baselines3", "version.txt")) as file_handler:
     __version__ = file_handler.read().strip()
 
 
@@ -41,7 +41,7 @@ Here is a quick example of how to train and run PPO on a cartpole environment:
 ```python
 import gym
 
-from stable_baselines3_ import PPO
+from stable_baselines3 import PPO
 
 env = gym.make("CartPole-v1")
 
@@ -63,7 +63,7 @@ for i in range(1000):
 Or just train a model with a one liner if [the environment is registered in Gym](https://www.gymlibrary.ml/content/environment_creation/) and if [the policy is registered](https://stable-baselines3.readthedocs.io/en/master/guide/custom_policy.html):
 
 ```python
-from stable_baselines3_ import PPO
+from stable_baselines3 import PPO
 
 model = PPO("MlpPolicy", "CartPole-v1").learn(10_000)
 ```
@@ -95,9 +95,9 @@ extra_packages = extra_no_roms + [  # noqa: RUF005
 
 
 setup(
-    name="stable_baselines3_",
-    packages=[package for package in find_packages() if package.startswith("stable_baselines3_")],
-    package_data={"stable_baselines3_": ["py.typed", "version.txt"]},
+    name="stable_baselines3",
+    packages=[package for package in find_packages() if package.startswith("stable_baselines3")],
+    package_data={"stable_baselines3": ["py.typed", "version.txt"]},
     install_requires=[
         "gym==0.21",  # Fixed version due to breaking changes in 0.22
         "numpy",

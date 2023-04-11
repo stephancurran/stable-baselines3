@@ -7,14 +7,14 @@ import pytest
 import torch as th
 from gym import spaces
 
-import stable_baselines3_ as sb3
-from stable_baselines3_ import A2C
-from stable_baselines3_.common.atari_wrappers import MaxAndSkipEnv
-from stable_baselines3_.common.env_util import is_wrapped, make_atari_env, make_vec_env, unwrap_wrapper
-from stable_baselines3_.common.evaluation import evaluate_policy
-from stable_baselines3_.common.monitor import Monitor
-from stable_baselines3_.common.noise import ActionNoise, OrnsteinUhlenbeckActionNoise, VectorizedActionNoise
-from stable_baselines3_.common.utils import (
+import stable_baselines3 as sb3
+from stable_baselines3 import A2C
+from stable_baselines3.common.atari_wrappers import MaxAndSkipEnv
+from stable_baselines3.common.env_util import is_wrapped, make_atari_env, make_vec_env, unwrap_wrapper
+from stable_baselines3.common.evaluation import evaluate_policy
+from stable_baselines3.common.monitor import Monitor
+from stable_baselines3.common.noise import ActionNoise, OrnsteinUhlenbeckActionNoise, VectorizedActionNoise
+from stable_baselines3.common.utils import (
     check_shape_equal,
     get_parameters_by_name,
     get_system_info,
@@ -22,7 +22,7 @@ from stable_baselines3_.common.utils import (
     polyak_update,
     zip_strict,
 )
-from stable_baselines3_.common.vec_env import DummyVecEnv, SubprocVecEnv
+from stable_baselines3.common.vec_env import DummyVecEnv, SubprocVecEnv
 
 
 @pytest.mark.parametrize("env_id", ["CartPole-v1", lambda: gym.make("CartPole-v1")])

@@ -116,11 +116,10 @@ Please read the [documentation](https://stable-baselines3.readthedocs.io/) for m
 Most of the code in the library tries to follow a sklearn-like syntax for the Reinforcement Learning algorithms.
 
 Here is a quick example of how to train and run PPO on a cartpole environment:
-
 ```python
 import gym
 
-from stable_baselines3_ import PPO
+from stable_baselines3 import PPO
 
 env = gym.make("CartPole-v1")
 
@@ -143,7 +142,7 @@ env.close()
 Or just train a model with a one liner if [the environment is registered in Gym](https://github.com/openai/gym/wiki/Environments) and if [the policy is registered](https://stable-baselines3.readthedocs.io/en/master/guide/custom_policy.html):
 
 ```python
-from stable_baselines3_ import PPO
+from stable_baselines3 import PPO
 
 model = PPO("MlpPolicy", "CartPole-v1").learn(10_000)
 ```

@@ -5,8 +5,8 @@ import gym
 import numpy as np
 import pytest
 
-from stable_baselines3_ import A2C, DDPG, DQN, PPO, SAC, TD3, HerReplayBuffer
-from stable_baselines3_.common.callbacks import (
+from stable_baselines3 import A2C, DDPG, DQN, PPO, SAC, TD3, HerReplayBuffer
+from stable_baselines3.common.callbacks import (
     CallbackList,
     CheckpointCallback,
     EvalCallback,
@@ -15,9 +15,9 @@ from stable_baselines3_.common.callbacks import (
     StopTrainingOnNoModelImprovement,
     StopTrainingOnRewardThreshold,
 )
-from stable_baselines3_.common.env_util import make_vec_env
-from stable_baselines3_.common.envs import BitFlippingEnv, IdentityEnv
-from stable_baselines3_.common.vec_env import DummyVecEnv, VecNormalize
+from stable_baselines3.common.env_util import make_vec_env
+from stable_baselines3.common.envs import BitFlippingEnv, IdentityEnv
+from stable_baselines3.common.vec_env import DummyVecEnv, VecNormalize
 
 
 def select_env(model_class) -> str:
