@@ -1,7 +1,7 @@
 import numpy as np
 from gym import spaces
 
-from stable_baselines3.common.vec_env.stacked_observations import StackedObservations
+from stable_baselines3_.common.vec_env.stacked_observations import StackedObservations
 
 compute_stacking = StackedObservations.compute_stacking
 NUM_ENVS = 2

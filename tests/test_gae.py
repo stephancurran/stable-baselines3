@@ -4,9 +4,9 @@ import pytest
 import torch as th
 from gym import spaces
 
-from stable_baselines3 import A2C, PPO, SAC
-from stable_baselines3.common.callbacks import BaseCallback
-from stable_baselines3.common.policies import ActorCriticPolicy
+from stable_baselines3_ import A2C, PPO, SAC
+from stable_baselines3_.common.callbacks import BaseCallback
+from stable_baselines3_.common.policies import ActorCriticPolicy
 
 
 class CustomEnv(gym.Env):
