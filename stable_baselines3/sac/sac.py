@@ -152,6 +152,8 @@ class SAC(OffPolicyAlgorithm):
         if _init_setup_model:
             self._setup_model()
 
+        print("hello")
+
     def _setup_model(self) -> None:
         super()._setup_model()
         self._create_aliases()
